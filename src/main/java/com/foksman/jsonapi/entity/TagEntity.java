@@ -5,6 +5,7 @@ import lombok.*;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 
 @Entity
 @NoArgsConstructor
@@ -18,8 +19,5 @@ public class TagEntity implements Serializable {
     @Id
     private Integer id;
     private String name;
-    @ManyToOne
-    @JsonBackReference
-    private BlogPostEntity post;
 
 }

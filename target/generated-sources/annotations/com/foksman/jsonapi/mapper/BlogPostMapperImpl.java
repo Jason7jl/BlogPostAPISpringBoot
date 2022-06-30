@@ -1,7 +1,6 @@
 package com.foksman.jsonapi.mapper;
 
 import com.foksman.jsonapi.entity.BlogPostEntity;
-import com.foksman.jsonapi.entity.TagEntity;
 import com.foksman.jsonapi.model.BlogPostResponseDto;
 import java.util.ArrayList;
 import java.util.List;
@@ -10,11 +9,11 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2022-06-29T16:53:56-0700",
+    date = "2022-06-29T21:44:35-0700",
     comments = "version: 1.4.1.Final, compiler: javac, environment: Java 11.0.12 (Amazon.com Inc.)"
 )
 @Component
-public class BlogPostMapperImpl implements BlogPostMapper {
+public class BlogPostMapperImpl extends BlogPostMapper {
 
     @Override
     public List<BlogPostResponseDto> entitiesToResponseDtos(List<BlogPostEntity> blogPostEntities) {
@@ -28,31 +27,6 @@ public class BlogPostMapperImpl implements BlogPostMapper {
         }
 
         return list;
-    }
-
-    @Override
-    public List<String> map(List<TagEntity> value) {
-        if ( value == null ) {
-            return null;
-        }
-
-        List<String> list = new ArrayList<String>( value.size() );
-        for ( TagEntity tagEntity : value ) {
-            list.add( tagEntityToTagDto( tagEntity ) );
-        }
-
-        return list;
-    }
-
-    @Override
-    public String tagEntityToTagDto(TagEntity tag) {
-        if ( tag == null ) {
-            return null;
-        }
-
-        String string = new String();
-
-        return string;
     }
 
     protected BlogPostResponseDto blogPostEntityToBlogPostResponseDto(BlogPostEntity blogPostEntity) {

@@ -7,14 +7,15 @@ import com.foksman.jsonapi.model.BlogPostResponseDto;
 import org.mapstruct.Mapper;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Mapper(componentModel = "spring")
-public interface BlogPostMapper {
+public abstract class BlogPostMapper {
 
-    List<BlogPostResponseDto> entitiesToResponseDtos(List<BlogPostEntity> blogPostEntities);
+    public abstract List<BlogPostResponseDto> entitiesToResponseDtos(List<BlogPostEntity> blogPostEntities);
 
-    List<String> map(List<TagEntity> value);
-
-    String tagEntityToTagDto(TagEntity tag);
+    List<String> map(List<TagEntity> value) {
+        return value.stream().map(TagEntity::getName).collect(Collectors.toList());
+    }
 
 }
