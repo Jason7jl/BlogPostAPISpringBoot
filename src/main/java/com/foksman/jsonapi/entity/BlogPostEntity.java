@@ -24,7 +24,7 @@ public class  BlogPostEntity implements Serializable {
     private int likes;
     private double popularity;
     private int reads;
-    @OneToMany(mappedBy = "post", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @ManyToMany
     private List<TagEntity> tags;
 
 
