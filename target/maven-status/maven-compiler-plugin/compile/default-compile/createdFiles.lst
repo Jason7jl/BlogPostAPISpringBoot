@@ -1,0 +1,16 @@
+com/foksman/jsonapi/controller/advice/BlogPostControllerAdvice.class
+com/foksman/jsonapi/controller/exception/ResourceNotFoundException.class
+com/foksman/jsonapi/JsonApiApplication.class
+com/foksman/jsonapi/model/QueryRequestDto.class
+com/foksman/jsonapi/repository/BlogPostRepository.class
+com/foksman/jsonapi/mapper/BlogPostMapperImpl.class
+com/foksman/jsonapi/controller/BlogPostController.class
+com/foksman/jsonapi/model/BlogPostResponseDto.class
+com/foksman/jsonapi/mapper/BlogPostMapper.class
+com/foksman/jsonapi/controller/exception/BadRequestException.class
+com/foksman/jsonapi/model/PingResponseDto.class
+com/foksman/jsonapi/service/impl/BlogPostServiceImpl.class
+com/foksman/jsonapi/model/ErrorDto.class
+com/foksman/jsonapi/entity/BlogPostEntity.class
+com/foksman/jsonapi/model/BlogPostRequestDto.class
+com/foksman/jsonapi/service/BlogPostService.class
